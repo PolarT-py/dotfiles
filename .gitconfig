@@ -1,0 +1,11 @@
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	name = Polar
+	email = 147011322+PolarT-py@users.noreply.github.com

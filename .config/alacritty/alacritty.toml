@@ -1,0 +1,15 @@
+#background_opacity = 0.8
+
+[font]
+size = 10.0
+
+[window]
+opacity = 0.8
+
+[window.padding]
+x = 10
+y = 10
+
+[colors]
+[colors.primary]
+background = "0x2E2E2E"
