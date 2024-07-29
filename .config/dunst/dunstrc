@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x50-30+20"
+    geometry = "300x50-30+40"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -57,7 +57,7 @@
     padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 16
+    horizontal_padding = 8
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -294,7 +294,7 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#222222"
     foreground = "#888888"
-    timeout = 4
+    timeout = 2
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
@@ -304,7 +304,7 @@
     foreground = "#ffffff"
     timeout = 6
     # Icon for notifications with normal urgency, uncomment to enable
-    icon = /path/to/icon
+    icon = ~/.local/share/icons/hicolor/32x32/apps/CustomIcons/notification.svg
 
 [urgency_critical]
     appname = "discord"
@@ -313,7 +313,7 @@
     frame_color = "#ff0000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    #icon = /path/to/icon
+    icon = ~/.local/share/icons/hicolor/32x32/apps/CustomIcons/urgent.svg
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

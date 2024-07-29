@@ -1,1 +1,1 @@
-[[ $(tty) == /dev/tty1 ]] && exec sway
+[[ $(tty) == /dev/tty1 ]] && exec Hyprland
