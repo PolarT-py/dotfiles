@@ -4,12 +4,23 @@
     font-size: 13px;
 }
 
+#backlight_battery {
+	background-color: rgba(0, 0, 0, 0.0);
+	padding: 3px;
+	color: #ff0000;
+	border: 2px solid white;
+	border-radius: 69px;
+	margin: 3px;
+	margin-right: 10px;
+}
+
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    /*background-color: rgba(43, 48, 59, 0.5);*/
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #ffffff;
-    transition-property: background-color;
+    /*transition-property: background-color;*/
     transition-duration: .5s;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 window#waybar.hidden {
@@ -117,11 +128,15 @@ button:hover {
 #clock {
     /*background-color: #64727D;*/
     color: #ffffff;
+    border: 2px white solid;
+	border-radius: 69px;
+    margin: 3px;
 }
 
 #battery {
     /*background-color: #ffffff;*/
     color: #ffffff;
+    margin-right: 10px;
 }
 
 #battery.charging, #battery.plugged {
@@ -146,7 +161,8 @@ button:hover {
 }
 
 #power-profiles-daemon {
-    padding-right: 7px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #power-profiles-daemon.performance {
@@ -182,6 +198,7 @@ label:focus {
 
 #backlight {
     /*background-color: #90b1b1;*/
+    margin: 0px;
 }
 
 #network {
@@ -235,8 +252,13 @@ label:focus {
 
 #tray {
     /*background-color: #000000;*/
-    opacity: 0.3;
-    margin-right: 30px;
+    /*opacity: 0.3;*/
+    margin-right: 10px;
+    border: 2px white solid;
+    border-radius: 69;
+    margin: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #tray > .passive {
@@ -307,7 +329,7 @@ label:focus {
 }
 
 #privacy {
-    padding: 0;
+    padding: 0px;
 }
 
 #privacy-item {
@@ -325,4 +347,18 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#power_box {
+	padding: 0px;
+	padding-left: 6px;
+	padding-right: 0px;
+	margin: 5px;
+	border: 2px #2756A5 solid;
+	border-radius: 69px;
+}
+
+/*Where is the power css*/
+#power {
+	color: blue;
 }

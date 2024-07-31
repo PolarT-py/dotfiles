@@ -24,14 +24,16 @@
         "cpu",
         "memory",
         "temperature",
-        "backlight",
+        //"backlight",
         //"keyboard-state",
         //"sway/language",
-        "battery",
+        //"battery",
+        "group/backlight_battery",
         "battery#bat2",
+        "group/power_box",
+		//"custom/power",
         "clock",
         "tray",
-        "custom/power"
     ],
     // Modules configuration
     // "hyprland/workspaces": {
@@ -86,7 +88,7 @@
             "on": " "
         },
         "single-icons": {
-            "on": "1 "
+            "on": "1z1 "
         },
         "state-icons": {
             "paused": "",
@@ -103,20 +105,22 @@
         }
     },
     "tray": {
+    	"format": "Tray > ",
         // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
         // "timezone": "America/New York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%H:%M   }"
     },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -124,7 +128,15 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
+    },
+    "group/backlight_battery": {
+    	"orientation": "horizontal",
+    	"modules": [
+    		"backlight",
+    		"battery"
+    	],
+    	"format": "Hello "
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -154,10 +166,10 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "default": " ",
+        "performance": " ",
+        "balanced": " ",
+        "power-saver": " "
       }
     },
     //"network": {
@@ -213,8 +225,13 @@
 		"hibernate": "systemctl hibernate"
 	}
     },
+    "group/power_box": {
+    	"modules": [
+    		"custom/power"
+    	]	
+    },
     "custom/power": {
-        "format": "⏻  ",
+        "format": "⏻ ",
         "tooltip": false,
         "on-click": "wlogout"
     }
