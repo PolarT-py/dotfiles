@@ -7,33 +7,37 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        "tray",
         "hyprland/mode",
         "hyprland/scratchpad",
-        "custom/media"
+        "custom/media",
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
+        //"idle_inhibitor",
         "pulseaudio",
         //"network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        //"power-profiles-daemon",
+		"group/sysinfo",
+        //"disk",
+        //"cpu",
+        //"memory",
+		"group/temp_power_profile",
+        //"power-profiles-daemon",
+        //"temperature",
         //"backlight",
         //"keyboard-state",
         //"sway/language",
         //"battery",
         "group/backlight_battery",
-        "battery#bat2",
+        //"battery#bat2",
         "group/power_box",
 		//"custom/power",
         "clock",
-        "tray",
     ],
     // Modules configuration
     // "hyprland/workspaces": {
@@ -115,12 +119,33 @@
         "format-alt": "{:%Y-%m-%d}",
         "format": "{:%H:%M   }"
     },
+    "group/sysinfo": {
+    	"orientation": "horizontal",
+    	"modules": [
+    		"disk",
+    		"cpu",
+    		"memory"
+    	],
+    	"drawer": true
+    },
+    "disk": {
+    	"format": "{percentage_used}% ",
+    	"tooltip": "false",
+    	"interval": 30
+    },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
         "format": "{}% "
+    },
+    "group/temp_power_profile": {
+    	"orientation": "horizontal",
+    	"modules": [
+    		"power-profiles-daemon",
+    	    "temperature"
+    	]
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -136,7 +161,7 @@
     		"backlight",
     		"battery"
     	],
-    	"format": "Hello "
+    	"format": ""
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -151,7 +176,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -183,12 +208,12 @@
     //},
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "[ {volume}% {icon}  ] [ {format_source}  ]",
+        "format": "{volume}% {icon}  |  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "0%   |  {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted": "0% ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -234,5 +259,5 @@
         "format": "⏻ ",
         "tooltip": false,
         "on-click": "wlogout"
-    }
+    },
 }

@@ -4,11 +4,77 @@
     font-size: 13px;
 }
 
+/* Workspaces */
+#workspaces {
+	background-color: #203254;
+    margin: 3px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px transparent solid;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: transparent;
+}
+
+#workspaces button {
+	background-color: #DED2E8;
+    padding: 0px 5px;
+    /* margin: 4px 3px; */
+    border-radius: 69px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: transparent;
+    background: #4478C3;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button {
+	margin: 3px;
+    padding: 0 5px;
+    background-color: #ffffff;
+    color: transparent;
+}
+
+/* Workspaces */
+
+#window {
+	background-color: #203254;
+	border: 2px #060728 double;
+	border-radius: 69px;
+	margin: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#temp_power_profile {
+	border: 2px white solid;
+	border-radius: 69px;
+	margin: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#sysinfo {
+	background-color: #DED2E8;
+	color: #191F22;
+	border: 2px white solid;
+	border-radius: 69px;
+	margin: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 #backlight_battery {
-	background-color: rgba(0, 0, 0, 0.0);
+	background-color: #203254;
 	padding: 3px;
 	color: #ff0000;
-	border: 2px solid white;
+	border: 2px #060728 double;
 	border-radius: 69px;
 	margin: 3px;
 	margin-right: 10px;
@@ -45,43 +111,9 @@ window#waybar.chromium {
     border: none;
 }
 
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #000000;
-    opacity: 0.5;
-}
-
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 #mode {
@@ -111,9 +143,6 @@ button:hover {
 }
 
 #window,
-#workspaces {
-    margin: 0 4px;
-}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -151,8 +180,8 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #f53c3c;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -185,20 +214,23 @@ label:focus {
 #cpu {
     /*background-color: #2ecc71;*/
     opacity: 1.0;
-    color: #ffffff;
+    color: #191F22;
 }
 
 #memory {
     /*background-color: #9b59b6;*/
+    color: #191F22;
 }
 
 #disk {
     /*background-color: #964B00;*/
+    color: #191F22;
 }
 
 #backlight {
     /*background-color: #90b1b1;*/
     margin: 0px;
+    color: #DED2E8;
 }
 
 #network {
@@ -212,6 +244,10 @@ label:focus {
 #pulseaudio {
     /*background-color: #f1c40f;*/
     color: #ffffff;
+    border: 2px white solid;
+	border-radius: 69px;
+    margin: 3px;
+    transition-duration: 5s;
 }
 
 #pulseaudio.muted {
@@ -251,7 +287,7 @@ label:focus {
 }
 
 #tray {
-    /*background-color: #000000;*/
+    background-color: #DED2E8;
     /*opacity: 0.3;*/
     margin-right: 10px;
     border: 2px white solid;
@@ -351,9 +387,11 @@ label:focus {
 
 #power_box {
 	padding: 0px;
-	padding-left: 6px;
+	padding-left: 5px;
 	padding-right: 0px;
 	margin: 5px;
+	margin-right: 8px;
+	margin-left: 2px;
 	border: 2px #2756A5 solid;
 	border-radius: 69px;
 }
