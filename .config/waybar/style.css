@@ -8,9 +8,10 @@
 #workspaces {
 	background-color: #203254;
     margin: 3px;
+    margin-right: 20px;
     padding: 0px 1px;
-    border-radius: 15px;
-    border: 0px transparent solid;
+    /* margin-bottom: -2px; */
+    border-radius: 69px;
     font-weight: bold;
     font-style: normal;
     font-size: 16px;
@@ -20,25 +21,37 @@
 #workspaces button {
 	background-color: #DED2E8;
     padding: 0px 5px;
-    /* margin: 4px 3px; */
+    margin: 4px 3px;
     border-radius: 69px;
-    border: 2px solid transparent;
+    border: none;
     transition: all 0.3s ease-in-out;
+    color: transparent;
+    font-size: 0px;
 }
 
 #workspaces button.active {
     color: transparent;
     background: #4478C3;
-    border-radius: 15px;
+    border-radius: 69px;
+    border: none;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
+    font-size: 0px;
 }
 
-#workspaces button {
-	margin: 3px;
-    padding: 0 5px;
-    background-color: #ffffff;
-    color: transparent;
+/* #workspaces button:hover { */
+/* 	background: #0383C0; */
+/* 	border: none; */
+/* } */
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
 }
 
 /* Workspaces */
@@ -83,8 +96,9 @@
 window#waybar {
     /*background-color: rgba(43, 48, 59, 0.5);*/
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
-    color: #ffffff;
+    color: white;
     /*transition-property: background-color;*/
+    border: none;
     transition-duration: .5s;
     background-color: rgba(0, 0, 0, 0.0);
 }
@@ -143,16 +157,6 @@ window#waybar.chromium {
 }
 
 #window,
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
 
 #clock {
     /*background-color: #64727D;*/
