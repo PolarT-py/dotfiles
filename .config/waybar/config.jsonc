@@ -18,9 +18,10 @@
     ],
     "modules-right": [
         "mpd",
+        //"network",
         "pulseaudio",
-		"group/sysinfo",
-		"group/temp_power_profile",
+	//"group/sysinfo",
+	//"group/temp_power_profile",
         "group/backlight_battery",
         "group/power_box",
         "clock",
@@ -102,7 +103,7 @@
     "clock": {
         // "timezone": "America/New York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}",
+        "format-alt": "{:%Y-%m-%d   }",
         "format": "{:%H:%M   }"
     },
     "group/sysinfo": {
@@ -144,10 +145,11 @@
     "group/backlight_battery": {
     	"orientation": "horizontal",
     	"modules": [
-    		"backlight",
+    	"power-profiles-daemon",
+    	"temperature",
     		"battery"
     	],
-    	"format": ""
+    	"format": "",
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -183,15 +185,15 @@
         "power-saver": " "
       }
     },
-    //"network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        //"format-wifi": "{essid} ({signalStrength}%) ",
-        //"format-ethernet": "{ipaddr}/{cidr} ",
-        //"tooltip-format": "{ifname} via {gwaddr} ",
-        //"format-linked": "{ifname} (No IP) ",
-        //"format-disconnected": "Disconnected ⚠",
-        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
-    //},
+    "network": {
+        "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}  |  {format_source}",

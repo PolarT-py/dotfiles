@@ -6,11 +6,13 @@
 
 /* Workspaces */
 #workspaces {
-	background-color: #203254;
+    background-color: #203254;
     margin: 3px;
     margin-right: 20px;
-    padding: 0px 1px;
+    padding-left: 2px;
+    padding-right: 2px;
     /* margin-bottom: -2px; */
+    border: 2px white solid;
     border-radius: 69px;
     font-weight: bold;
     font-style: normal;
@@ -19,8 +21,8 @@
 }
 
 #workspaces button {
-	background-color: #DED2E8;
-    padding: 0px 5px;
+    background-color: #DED2E8;
+    padding: 0px 4px;
     margin: 4px 3px;
     border-radius: 69px;
     border: none;
@@ -95,7 +97,7 @@
 
 window#waybar {
     /*background-color: rgba(43, 48, 59, 0.5);*/
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: white;
     /*transition-property: background-color;*/
     border: none;
@@ -162,7 +164,7 @@ window#waybar.chromium {
     /*background-color: #64727D;*/
     color: #ffffff;
     border: 2px white solid;
-	border-radius: 69px;
+    border-radius: 69px;
     margin: 3px;
 }
 
@@ -291,10 +293,10 @@ label:focus {
 }
 
 #tray {
-    background-color: #DED2E8;
+    background-color: rgba(0, 0, 0, 0.2);
     /*opacity: 0.3;*/
     margin-right: 10px;
-    border: 2px white solid;
+    border-bottom: 5px white solid;
     border-radius: 69;
     margin: 3px;
     padding-left: 20px;
@@ -391,6 +393,7 @@ label:focus {
 
 #power_box {
 	padding: 0px;
+	padding-top: 4px;
 	padding-left: 5px;
 	padding-right: 0px;
 	margin: 5px;
