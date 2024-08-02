@@ -1,0 +1,4 @@
+@theme "/usr/share/rofi/themes/Monokai.rasi"
+window {
+    border-radius: 10px;
+}
