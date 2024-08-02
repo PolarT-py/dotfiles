@@ -76,8 +76,10 @@
 }
 
 #sysinfo {
-	background-color: #DED2E8;
-	color: #191F22;
+	/* background-color: #DED2E8; */
+	background-color: transparent;
+	/* color: #191F22; */
+	color: #ffffff;
 	border: 2px white solid;
 	border-radius: 69px;
 	margin: 3px;
@@ -219,18 +221,21 @@ label:focus {
 
 #cpu {
     /*background-color: #2ecc71;*/
-    opacity: 1.0;
+    /* opacity: 1.0; */
     color: #191F22;
+    color: #ffffff;
 }
 
 #memory {
     /*background-color: #9b59b6;*/
-    color: #191F22;
+    /* color: #191F22; */
+    color: #ffffff;
 }
 
 #disk {
     /*background-color: #964B00;*/
-    color: #191F22;
+    /* color: #191F22; */
+    color: #ffffff;
 }
 
 #backlight {
