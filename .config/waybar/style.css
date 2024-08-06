@@ -6,7 +6,8 @@
 
 /* Workspaces */
 #workspaces {
-    background-color: #203254;
+    /*background-color: #203254;*/
+    background-color: rgba(32, 50, 84, 0.8);
     margin: 3px;
     margin-right: 20px;
     padding-left: 2px;
@@ -88,7 +89,8 @@
 }
 
 #backlight_battery {
-	background-color: #203254;
+	/*background-color: #203254;*/
+	background-color: rgba(32, 50, 84, 0.8);
 	padding: 3px;
 	color: #ff0000;
 	border: 2px #060728 double;

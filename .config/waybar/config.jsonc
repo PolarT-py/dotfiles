@@ -122,16 +122,16 @@
     	"drawer": true
     },
     "disk": {
-    	"format": "{percentage_used}% ",
+    	"format": "   {percentage_used}%",
     	"tooltip": "false",
     	"interval": 30
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "  {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "  {}%"
     },
     "group/temp_power_profile": {
     	"orientation": "horizontal",
