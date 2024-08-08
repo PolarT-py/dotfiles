@@ -2,3 +2,7 @@
 window {
     border-radius: 10px;
 }
+
+configuration {
+    modi: "drun,run,window,ssh";
+}
