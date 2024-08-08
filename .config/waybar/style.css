@@ -1,3 +1,6 @@
+/*@import "../../.cache/wal/colors-waybar.css";*/
+@import url("../../.cache/wal/colors-waybar.css");
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -7,13 +10,14 @@
 /* Workspaces */
 #workspaces {
     /*background-color: #203254;*/
-    background-color: rgba(32, 50, 84, 0.8);
+    /*background-color: rgba(32, 50, 84, 0.8);*/
+    background-color: @color1;
     margin: 3px;
     margin-right: 20px;
     padding-left: 2px;
     padding-right: 2px;
     /* margin-bottom: -2px; */
-    border: 2px white solid;
+    border: 2px @color0 solid;
     border-radius: 69px;
     font-weight: bold;
     font-style: normal;
@@ -22,7 +26,8 @@
 }
 
 #workspaces button {
-    background-color: #DED2E8;
+    /*background-color: #DED2E8;*/
+    background-color: @color2;
     padding: 0px 4px;
     margin: 4px 3px;
     border-radius: 69px;
@@ -34,7 +39,8 @@
 
 #workspaces button.active {
     color: transparent;
-    background: #4478C3;
+    /*background: #4478C3;*/
+    background-color: @color3;
     border-radius: 69px;
     border: none;
     min-width: 40px;
@@ -78,10 +84,11 @@
 
 #sysinfo {
 	/* background-color: #DED2E8; */
-	background-color: rgba(0, 0, 0, 0.2);
+	/*background-color: rgba(0, 0, 0, 0.2);*/
+        background-color: @color1;
 	/* color: #191F22; */
-	color: #ffffff;
-	border: 2px white solid;
+	color: @foreground;
+	border: 2px @color0 double;
 	border-radius: 69px;
 	margin: 3px;
 	padding-left: 10px;
@@ -90,10 +97,11 @@
 
 #backlight_battery {
 	/*background-color: #203254;*/
-	background-color: rgba(32, 50, 84, 0.8);
+	/*background-color: rgba(32, 50, 84, 0.8);*/
+	background-color: @color1;
 	padding: 3px;
 	color: #ff0000;
-	border: 2px #060728 double;
+	border: 2px @color0 double;
 	border-radius: 69px;
 	margin: 3px;
 	margin-right: 10px;
@@ -166,25 +174,26 @@ window#waybar.chromium {
 
 #clock {
     background-color: rgba(0, 0, 0, 0.2);
-    color: #ffffff;
-    border: 2px white solid;
+    color: @foreground;
+    border: 2px @color0 solid;
     border-radius: 69px;
     margin: 3px;
 }
 
 #battery {
     /*background-color: #ffffff;*/
-    color: #ffffff;
+    color: @foreground;
     margin-right: 10px;
 }
 
 #battery.charging, #battery.plugged {
-    color: #26A65B;
+    /*color: #26A65B;*/
+    color: @background;
 }
 
 @keyframes blink {
     to {
-        color: #ffffff;
+        color: @foreground;
     }
 }
 
@@ -205,15 +214,18 @@ window#waybar.chromium {
 }
 
 #power-profiles-daemon.performance {
-    color: #f53c3c;
+    /*color: #f53c3c;*/
+    color: @foreground;
 }
 
 #power-profiles-daemon.balanced {
-    color: #2980b9;
+    /*color: #2980b9;*/
+    color: @foreground;
 }
 
 #power-profiles-daemon.power-saver {
-    color: #2ecc71;
+    /*color: #2ecc71;*/
+    color: @foreground;
 }
 
 label:focus {
@@ -226,18 +238,21 @@ label:focus {
     /* opacity: 1.0; */
     color: #191F22;
     color: #ffffff;
+    color: @foreground;
 }
 
 #memory {
     /*background-color: #9b59b6;*/
     /* color: #191F22; */
     color: #ffffff;
+    color: @foreground;
 }
 
 #disk {
     /*background-color: #964B00;*/
     /* color: #191F22; */
     color: #ffffff;
+    color: @foreground;
 }
 
 #backlight {
@@ -256,9 +271,9 @@ label:focus {
 
 #pulseaudio {
     background-color: rgba(0, 0, 0, 0.2);
-    color: #ffffff;
-    border: 2px white solid;
-	border-radius: 69px;
+    color: @foreground;
+    border: 2px @color0 solid;
+    border-radius: 69px;
     margin: 3px;
     transition-duration: 5s;
 }
@@ -293,10 +308,12 @@ label:focus {
 
 #temperature {
     color: #f0932b;
+    color: @foreground;
 }
 
 #temperature.critical {
     color: #eb4d4b;
+    color: @background;
 }
 
 #tray {
@@ -402,6 +419,7 @@ label:focus {
 
 #power_box {
 	background-color: rgba(0, 0, 0, 0.2);
+	color: @foreground;
 	padding: 0px;
 	padding-top: 4px;
 	padding-left: 5px;
@@ -409,7 +427,7 @@ label:focus {
 	margin: 5px;
 	margin-right: 8px;
 	margin-left: 2px;
-	border: 2px #2756A5 solid;
+	border: 2px @color0 solid;
 	border-radius: 69px;
 }
 
