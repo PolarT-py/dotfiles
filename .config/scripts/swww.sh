@@ -20,4 +20,4 @@ fi
 
 echo "$1/$random_file"
 
-swww img --transition-type grow --transition-pos 0.854,0.977 --transition-step 90 "$1/$random_file"
+swww img --transition-type grow --transition-pos 0.5,0.98 --transition-step 2 "$1/$random_file"

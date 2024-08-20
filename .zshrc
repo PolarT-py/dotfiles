@@ -123,3 +123,7 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 if [ -f ~/.cache/wal/colors.sh ]; then
     source ~/.cache/wal/colors.sh
 fi
+
+export GTK_THEME="arc-gtk-theme"
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export GTK3_RC_FILES="$HOME/.config/gtk-3.0/settings.ini"
