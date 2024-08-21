@@ -2,30 +2,34 @@
 {
     "layer": "top", // Waybar at top layer
     //"position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    // "height": 0, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
+    "margin-left": 5,
+    "margin-right": 5,
+	"margin-top": 0,
     // Choose the order of the modules
     "modules-left": [
         "tray",
+        "hyprland/workspaces",
         "group/sysinfo",
+        // "hyprland/workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
-        "custom/media",
-        "hyprland/window"
+        "custom/media"
+        // "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        // "hyprland/workspaces"
+        "hyprland/window",
     ],
     "modules-right": [
         "mpd",
         //"network",
         "pulseaudio",
-	//"group/sysinfo",
-	//"group/temp_power_profile",
         "group/backlight_battery",
-        "group/power_box",
         "clock",
+        "group/power_box"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -66,7 +70,9 @@
     },
     "hyprland/window": {
         "format": "{class}",
-        "icons": true
+        "icons": true,
+        "format-alt": "{title}",
+        "tooltip-format": "App title"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -107,10 +113,10 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New York",
+        "timezone": "America/Toronto",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d   }",
-        "format": "{:%H:%M   }"
+		// "format-alt": "{:%Y-%m-%d   }",
+        "format": "  {:%I:%M %p     %d %b}"
     },
     "group/sysinfo": {
     	"orientation": "horizontal",
@@ -124,14 +130,16 @@
     "disk": {
     	"format": "   {percentage_used}%",
     	"tooltip": "false",
-    	"interval": 30
+    	"interval": 60
     },
     "cpu": {
         "format": "  {usage}%",
-        "tooltip": false
+        "tooltip": true,
+        "interval": 10
     },
     "memory": {
-        "format": "  {}%"
+        "format": "  {}%",
+        "interval": 10
     },
     "group/temp_power_profile": {
     	"orientation": "horizontal",
