@@ -282,7 +282,7 @@ label:focus {
 }
 
 #custom-media.custom-spotify {
-    /*background-color: #66cc99;*/
+    /* background-color: #66cc99; */
 }
 
 #custom-media.custom-vlc {
@@ -328,20 +328,25 @@ label:focus {
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: @background1;
+	color: @foreground;
+	border: solid @outline1 2px;
+	border-top-left-radius: 21px;
+	border-bottom-right-radius: 21px;
+	margin: 5px;
+	margin-left: 0px;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    /* background-color: #f53c3c; */
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    /* background-color: #90b1b1; */
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    /* background-color: #51a37a; */
 }
 
 #language {

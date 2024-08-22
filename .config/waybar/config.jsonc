@@ -12,20 +12,13 @@
     "modules-left": [
         "tray",
         "hyprland/workspaces",
-        "group/sysinfo",
-        // "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media"
-        // "hyprland/window"
+        "group/sysinfo"
+        //"mpd",
     ],
     "modules-center": [
-        // "hyprland/workspaces"
         "hyprland/window",
     ],
     "modules-right": [
-        "mpd",
-        //"network",
         "pulseaudio",
         "group/backlight_battery",
         "clock",
@@ -77,7 +70,7 @@
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "{consumeIcon}{randomIcon} {repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
