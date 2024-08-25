@@ -40,7 +40,7 @@
 }
 
 #workspaces button.active {
-    background: linear-gradient(to right, @color1, @color3, @color3, @color3,@color1);
+    background: linear-gradient(to right, @color1, @color3, @color3, @color3, @color1);
     border: none;
     transition: all 0.3s ease-in-out;
     min-width: 60px;
@@ -171,8 +171,7 @@ window#waybar.chromium {
 }
 
 #battery.charging, #battery.plugged {
-    /*color: #26A65B;*/
-    color: @color2;
+    /* color: @color2; */
 }
 
 @keyframes blink {
@@ -432,7 +431,7 @@ label:focus {
 
 #custom-terminal {
   color: white;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 #custom-discord {

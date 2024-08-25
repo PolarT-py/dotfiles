@@ -17,7 +17,7 @@
         //"mpd",
     ],
     "modules-center": [
-        "hyprland/window",
+        "hyprland/window"
     ],
     "modules-right": [
         "pulseaudio",
@@ -110,7 +110,7 @@
         "timezone": "America/Toronto",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		// "format-alt": "{:%Y-%m-%d   }",
-        "format": "  {:%I:%M %p     %d %b}"
+        "format": "<span foreground='#CD9E54'></span>  {:%I:%M %p   <span foreground='#B77788'></span>  %d %b}"
     },
     "group/sysinfo": {
     	"orientation": "horizontal",
@@ -122,17 +122,17 @@
     	"drawer": true
     },
     "disk": {
-    	"format": "   {percentage_used}%",
+    	"format": "<span foreground='#D6AF6F'></span>   {percentage_used}%",
     	"tooltip": "false",
     	"interval": 60
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": "<span foreground='#DF673D'></span>  {usage}%",
         "tooltip": true,
         "interval": 10
     },
     "memory": {
-        "format": "  {}%",
+        "format": "<span foreground='#FFAE2C'></span>  {}%",
         "interval": 10
     },
     "group/temp_power_profile": {
@@ -147,7 +147,7 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "<span foreground='#99504C'>{icon}</span> {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "group/backlight_battery": {
@@ -170,20 +170,22 @@
             "warning": 50,
             "critical": 20
         },
-        "format": "{capacity}% {icon}",
+        "format": "<span foreground='#97A15C'>{icon}</span>  {capacity}%",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format-charging": "<span foreground='#616444'></span> {capacity}%",
+        "format-plugged": " {capacity}%",
+
+        // "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "interval": 5
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
+      "format": "<span foreground='#CA7B49'>{icon}</span>  ",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
@@ -203,13 +205,13 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}  |  {format_source}",
+        "scroll-step": 1, // %, can be a float
+        "format": "<span foreground='#5B736D'>{icon}</span> {volume}%  <span foreground='#7DAEA3' size='large'></span>   {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "0%   |  {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "0% ",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "<span foreground='#414744'></span>   0%  <span foreground='#7DAEA3' size='large'></span>   {format_source}",
+        "format-source": "<span foreground='#5B736D'></span> {volume}%",
+        "format-source-muted": "<span foreground='#414744'></span>  0%",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -217,7 +219,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "󰖀", " ", " "]
         },
         "on-click": "pavucontrol"
     },
@@ -231,7 +233,7 @@
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        // POLART"exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power2": {
         "format" : "⏻  ",
@@ -264,8 +266,7 @@
         	"custom/discord",
         	"custom/github",
         	"custom/terminal",
-    	],
-    	"drawer": true
+    	]
     },
     "custom/firefox": {
     	"format": " ",
@@ -278,19 +279,19 @@
     	"on-click": "dolphin"
     },
     "custom/terminal": {
-      "format": " ",
+      "format": "",
       "tooltip": false,
-      "on-click": "alacritty"
+      "on-click": "alacritty",
     },
     "custom/discord": {
       "format": " ",
       "tooltip": false,
-      "on-click": ""
+      "on-click": "vesktop"
     },
     "custom/github": {
       "format": " ",
       "tooltip": false,
-      "on-click": ""
+      "on-click": "firefox https://github.com"
     },
     "custom/": {
       "format": "",
