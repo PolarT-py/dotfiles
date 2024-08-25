@@ -3,8 +3,9 @@
 
 * {
     font-family: FontAwesome, Inconsolata,Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
+    transition: 0.25s;
 }
 
 *:hover {
@@ -14,12 +15,16 @@
 /* Workspaces */
 
 #workspaces {
-    background: linear-gradient(to right, @background2, @color1, @background2);
-    border: 2px @outline2 solid;
-    border-radius: 69px;
+    /* background: linear-gradient(to right, @background2, @color1, @background2); */
+    border-bottom: 2px @outline2 solid;
+    border-radius: 1px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     font-size: 0px;
-    margin: 2px;
+    margin: 5px;
     padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
     color: transparent;
 }
 
@@ -35,10 +40,10 @@
 }
 
 #workspaces button.active {
-    background-color: @color3;
+    background: linear-gradient(to right, @color1, @color3, @color3, @color3,@color1);
     border: none;
     transition: all 0.3s ease-in-out;
-    min-width: 40px;
+    min-width: 60px;
 }
 
 #workspaces button:hover {
@@ -71,8 +76,8 @@
 	background-color: @background1;
 	color: @foreground;
 	border: solid @outline1 2px;
-	/* border-top-left-radius: 21px; */
-	border-bottom-right-radius: 21px;
+	border-bottom-left-radius: 21px;
+	border-top-right-radius: 21px;
 	margin: 5px;
 	margin-left: 0px;
 }
@@ -402,13 +407,49 @@ label:focus {
     background-color: #0069d4;
 }
 
+#quickapps {
+	background-color: @background1;
+	color: @foreground;
+	border: solid @outline1 2px;
+	/* border-top-left-radius: 21px; */
+	border-bottom-right-radius: 21px;
+	margin: 5px;
+	margin-left: 0px;
+}
+
+#quickapps * {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#custom-firefox {
+	color: orange;
+}
+
+#custom-filemanager {
+	color: skyblue;
+}
+
+#custom-terminal {
+  color: white;
+  margin-right: 10px;
+}
+
+#custom-discord {
+  color: #5865F2;
+}
+
+#custom-github {
+  color: white;
+}
+
 #power_box {
 	background-color: rgba(0, 0, 0, 0.2);
 	background-color: @background1;
 	color: @color3;
 	padding: 0px;
-	padding-top: 3px;
-	padding-left: 6px;
+	padding-top: 5px;
+	padding-left: 8px;
 	padding-right: 2px;
 	margin: 5px;
 	margin-right: 8px;

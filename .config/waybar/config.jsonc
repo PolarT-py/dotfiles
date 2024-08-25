@@ -11,6 +11,7 @@
     // Choose the order of the modules
     "modules-left": [
         "tray",
+        "group/quickapps",
         "hyprland/workspaces",
         "group/sysinfo"
         //"mpd",
@@ -254,5 +255,46 @@
         "format": "⏻ ",
         "tooltip": false,
         "on-click": "wlogout"
+    },
+    "group/quickapps": {
+    	"orientation": "horizontal",
+    	"modules": [
+    		"custom/firefox",
+    		"custom/filemanager",
+        	"custom/discord",
+        	"custom/github",
+        	"custom/terminal",
+    	],
+    	"drawer": true
+    },
+    "custom/firefox": {
+    	"format": " ",
+    	"tooltip": false,
+    	"on-click": "firefox"
+    },
+    "custom/filemanager": {
+    	"format": " ",
+    	"tooltip": false,
+    	"on-click": "dolphin"
+    },
+    "custom/terminal": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": "alacritty"
+    },
+    "custom/discord": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": ""
+    },
+    "custom/github": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": ""
+    },
+    "custom/": {
+      "format": "",
+      "tooltip": false,
+      "on-click": ""
     },
 }
