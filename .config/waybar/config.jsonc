@@ -43,6 +43,13 @@
     //         "default": ""
     //     }
     },
+    "wlr/taskbar": {
+    	"icon_size": 20,
+    	"buttons": ["minimize", "close", "activate"],
+    	"format": "{icon} {title}",
+    	"tooltip": true,
+    	"on-click": "hyprctl dispatch focuswindow {id}"
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
