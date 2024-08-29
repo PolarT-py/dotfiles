@@ -156,7 +156,14 @@ window#waybar.chromium {
 
 #clock {
     /* background-color: @background1; */
-    background: linear-gradient(to right, @background2, @color1);
+    /* background: linear-gradient(to right, @background2, @color1); */
+    background: linear-gradient(
+        to right,
+        @color1 0%,
+        rgba(0, 0, 0, 0.2) 52%,
+        rgba(0, 0, 0, 0.2) 52%,
+        @color2 100%
+      );
     color: @foreground;
     border: solid @outline2 2px;
     border-top-right-radius: 21px;
@@ -447,7 +454,7 @@ label:focus {
 	background-color: @background1;
 	color: @color3;
 	padding: 0px;
-	padding-top: 5px;
+	padding-top: 4px;
 	padding-left: 8px;
 	padding-right: 2px;
 	margin: 5px;
