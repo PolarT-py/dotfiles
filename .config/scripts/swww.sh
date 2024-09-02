@@ -20,4 +20,6 @@ fi
 
 echo "$1/$random_file"
 
-swww img --transition-type grow --transition-pos 0.5,0.98 --transition-step 2 "$1/$random_file"
+export SWWW_TRANSITION_FPS=60
+
+swww img --transition-type wipe --transition-pos 0.5,0.98 --transition-step 255 "$1/$random_file"

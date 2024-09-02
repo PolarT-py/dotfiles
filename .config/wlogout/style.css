@@ -5,6 +5,7 @@
 	box-shadow: none;
 	font-size: 24px;
 	color: #EBDBB2;
+	transition: 0.2s;
 }
 
 window {

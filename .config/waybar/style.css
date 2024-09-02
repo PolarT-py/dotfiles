@@ -34,7 +34,7 @@
     transition: all 0.3s ease-in-out;
     border-radius: 69px;
     font-size: 0px;
-    padding: 0 4px;
+    padding: 0 8px;
     color: transparent;
     margin: 0 1px;
 }
@@ -42,8 +42,8 @@
 #workspaces button.active {
     background: linear-gradient(135deg, @color1, @color3);
     border: none;
-    transition: all 0.3s ease-in-out;
-    min-width: 60px;
+    transition: all 0.4s ease-in-out;
+    min-width: 50px;
 }
 
 #workspaces button:hover {
@@ -175,6 +175,7 @@ window#waybar.chromium {
     /*background-color: #ffffff;*/
     color: @foreground;
     margin-right: 10px;
+    background-color: transparent;
 }
 
 #battery.charging, #battery.plugged {
@@ -420,7 +421,7 @@ label:focus {
 	/* border-top-left-radius: 21px; */
 	border-bottom-right-radius: 21px;
 	margin: 5px;
-	margin-left: 0px;
+	margin-left: 10px;
 }
 
 #quickapps * {
