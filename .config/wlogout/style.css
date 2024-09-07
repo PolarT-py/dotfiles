@@ -5,7 +5,7 @@
 	box-shadow: none;
 	font-size: 24px;
 	color: #EBDBB2;
-	transition: 0.2s;
+	transition: 0.5s;
 }
 
 window {
@@ -13,7 +13,7 @@ window {
 }
 
 button {
-    border-radius: 25px;
+    border-radius: 10px;
     margin: 10px;
 	padding-top: 60px;
 	/*border-color: @outline1;*/
@@ -33,6 +33,7 @@ button:focused, button:active, button:hover {
 	border-color: @outline2;
 	outline-style: none;
 	border-radius: 69px;
+	background-size: 30%;
 }
 
 #lock {
@@ -41,7 +42,7 @@ button:focused, button:active, button:hover {
 
 #logout {
     background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-    margin: 50px;
+    margin: 30px;
 }
 
 #suspend {
@@ -50,7 +51,7 @@ button:focused, button:active, button:hover {
 
 #hibernate {
     background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
-    margin: 50px;
+    margin: 30px;
 }
 
 #shutdown {
@@ -59,5 +60,5 @@ button:focused, button:active, button:hover {
 
 #reboot {
     background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    margin: 50px;
+    margin: 30px;
 }

@@ -136,11 +136,11 @@
     "cpu": {
         "format": "<span foreground='#DF673D'></span>  {usage}%",
         "tooltip": true,
-        "interval": 10
+        "interval": 2
     },
     "memory": {
         "format": "<span foreground='#FFAE2C'></span>  {}%",
-        "interval": 10
+        "interval": 6
     },
     "group/temp_power_profile": {
     	"orientation": "horizontal",
