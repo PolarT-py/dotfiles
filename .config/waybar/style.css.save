@@ -1,0 +1,487 @@
+z@import url("../../.cache/wal/colors-waybar.css");
+@import url("color.css");
+
+* {
+    font-family: FontAwesome, Inconsolata,Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+*:hover {
+	opacity: 0.6;
+}
+
+/* Workspaces */
+
+#workspaces {
+    /* background: linear-gradient(to right, @background2, @color1, @background2); */
+    border-bottom: 2px @outline2 solid;
+    border-radius: 1px;
+    /* border-top-left-radius: 15px; */
+    /* border-top-right-radius: 15px; */
+    font-size: 0px;
+    margin: 5px;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: transparent;
+}
+
+#workspaces button {
+    background-color: @color2;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 69px;
+    font-size: 0px;
+    padding: 0 8px;
+    color: transparent;
+    margin: 0 1px;
+}
+
+#workspaces button.active {
+    background: linear-gradient(135deg, @color1, @color3);
+    border: none;
+    transition: all 0.4s ease-in-out;
+    min-width: 50px;
+}
+
+#workspaces button:hover {
+	background-color: @color1;
+	border: none;
+	color: white;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-center > widget:first-child > #workspaces {
+    margin-left: 0px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-center > widget:last-child > #workspaces {
+    margin-right: 0px;
+}
+
+/* Workspaces */
+
+#temp_power_profile {
+	border: 2px white solid;
+	border-radius: 69px;
+	margin: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#sysinfo {
+	background-color: @background1;
+	color: @foreground;
+	border: solid @outline1 2px;
+	border-bottom-left-radius: 21px;
+	border-top-right-radius: 21px;
+	margin: 5px;
+	margin-left: 0px;
+}
+
+#backlight_battery {
+	background-color: @background1;
+	/* background: linear-gradient(to right, @background1, @color1); */
+	color: @foreground;
+	border: solid @outline1 2px;
+	border-top-right-radius: 21px;
+	border-bottom-left-radius: 21px;
+	margin: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+window#waybar {
+    background-color: @background1;
+    color: white;
+    border-left: solid @outline1 2px;
+    border-right: solid @outline1 2px;
+    border-bottom: solid @outline1 2px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 1px;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#window,
+
+#clock {
+    /* background-color: @background1; */
+    /* background: linear-gradient(to right, @background2, @color1); */
+    background: linear-gradient(
+        to right,
+        @color1 0%,
+        rgba(0, 0, 0, 0.2) 52%,
+        rgba(0, 0, 0, 0.2) 52%,
+        @color2 100%
+      );
+    color: @foreground;
+    border: solid @outline2 2px;
+    border-top-right-radius: 21px;
+    border-bottom-left-radius: 21px;
+    margin: 5px;
+}
+
+#battery {
+    /*background-color: #ffffff;*/
+    color: @foreground;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+#battery.charging, #battery.plugged {
+    /* color: @color2; */
+}
+
+@keyframes blink {
+    to {
+        color: @foreground;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#power-profiles-daemon {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#power-profiles-daemon.performance {
+    /*color: #f53c3c;*/
+    color: @foreground;
+}
+
+#power-profiles-daemon.balanced {
+    /*color: #2980b9;*/
+    color: @foreground;
+}
+
+#power-profiles-daemon.power-saver {
+    /*color: #2ecc71;*/
+    color: @foreground;
+}
+
+label:focus {
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+#cpu {
+    /*background-color: #2ecc71;*/
+    /* opacity: 1.0; */
+    color: #191F22;
+    color: #ffffff;
+    color: @foreground;
+}
+
+#memory {
+    /*background-color: #9b59b6;*/
+    /* color: #191F22; */
+    color: #ffffff;
+    color: @foreground;
+}
+
+#disk {
+    /*background-color: #964B00;*/
+    /* color: #191F22; */
+    color: #ffffff;
+    color: @foreground;
+}
+
+#backlight {
+    /*background-color: #90b1b1;*/
+    margin: 0px;
+    color: #DED2E8;
+}
+
+#network {
+   /*background-color: #2980b9;*/
+}
+
+#network.disconnected {
+    /*background-color: #f53c3c;*/
+}
+
+#pulseaudio {
+    background-color: @background1;
+    /* background: linear-gradient(to right, @background1, @color1); */
+    color: @foreground;
+    border: solid @outline1 2px;
+    border-top-right-radius: 21px;
+    border-bottom-left-radius: 21px;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition-duration: 5s;
+}
+
+#pulseaudio.muted {
+    /*background-color: #90b1b1;*/
+    color: #ffffff;
+}
+
+#wireplumber {
+    /*background-color: #fff0f5;*/
+    color: #ffffff;
+}
+
+#wireplumber.muted {
+    /*background-color: #f53c3c;*/
+}
+
+#custom-media {
+    /*background-color: #66cc99;*/
+    color: #ffffff;
+    /*min-width: 100px;*/
+}
+
+#custom-media.custom-spotify {
+    /* background-color: #66cc99; */
+}
+
+#custom-media.custom-vlc {
+    /*background-color: #ffa000;*/
+}
+
+#temperature {
+    color: #f0932b;
+    color: @foreground;
+}
+
+#temperature.critical {
+    color: #eb4d4b;
+    color: @background;
+}
+
+#tray {
+    background-color: @background1;
+    /* background: linear-gradient(to right, @background1, @color1); */
+    color: @foreground;
+    border: solid @outline1 2px;
+    border-bottom-left-radius: 21px;
+    margin: 5px;
+    min-width: 60px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    /*background-color: #2d3436;*/
+}
+
+#idle_inhibitor.activated {
+    /*background-color: #ecf0f1;*/
+    color: #2d3436;
+}
+
+#mpd {
+    background-color: @background1;
+	color: @foreground;
+	border: solid @outline1 2px;
+	border-top-left-radius: 21px;
+	border-bottom-right-radius: 21px;
+	margin: 5px;
+	margin-left: 0px;
+}
+
+#mpd.disconnected {
+    /* background-color: #f53c3c; */
+}
+
+#mpd.stopped {
+    /* background-color: #90b1b1; */
+}
+
+#mpd.paused {
+    /* background-color: #51a37a; */
+}
+
+#language {
+    /*background: #00b093;*/
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+#privacy {
+    padding: 0px;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}
+
+#quickapps {
+	background-color: @background1;
+	color: @foreground;
+	border: solid @outline1 2px;
+	/* border-top-left-radius: 21px; */
+	border-bottom-right-radius: 21px;
+	margin: 5px;
+	margin-left: 10px;
+}
+
+#quickapps * {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#custom-firefox {
+	color: orange;
+}
+
+#custom-filemanager {
+	color: skyblue;
+}
+
+#custom-terminal {
+  color: white;
+  margin-right: 20px;
+}
+
+#custom-discord {
+  color: #5c64f4;
+}
+
+#custom-github {
+  color: white;
+}
+
+#power_box {
+	background-color: rgba(0, 0, 0, 0.2);
+	background-color: @background1;
+	color: @color3;
+	padding: 0px;
+	padding-top: 4px;
+	padding-left: 8px;
+	padding-right: 2px;
+	margin: 5px;
+	margin-right: 8px;
+	margin-left: 2px;
+	border: 2px @outline1 solid;
+	border-radius: 69px;
+}
+
+/*Where is the power css*/
+#power {
+	color: blue;
+}
+
+#window {
+	/* background-color: @background1; */
+	background: linear-gradient(to right, @background1, @outline1, @background1);
+	color: @foreground;
+	border: solid @outline1 2px;
+	border-top-left-radius: 21px;
+	border-bottom-right-radius: 21px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	margin: 5px;
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 40px;
+}
