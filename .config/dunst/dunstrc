@@ -30,6 +30,9 @@
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
     geometry = "300x50-30+40"
+    #width = 300
+    #height = 50
+    offset = 20x20
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -51,7 +54,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 4
+    separator_height = 1
 
     # Padding between text and separator.
     padding = 8
@@ -61,10 +64,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#075495"
 
     # Define a color for the separator.
     # possible values are:
@@ -130,7 +133,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
@@ -172,7 +175,7 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 64
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -222,7 +225,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 5
+    corner_radius = 3
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -275,16 +278,16 @@
     # Xev might be helpful to find names for keys.
 
     # Close notification.
-    #close = ctrl+space
+    #close = ctrl+shift+space
 
     # Close all notifications.
-    #close_all = ctrl+shift+space
+    #close_all = ctrl+shift+alt+space
 
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = ctrl+shift+grave
+    history = ctrl+shift+alt+grave
 
     # Context menu.
     #context = ctrl+shift+period
@@ -292,19 +295,22 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    #background = "#5c7282"
+    #background = "#676e78"
+    background = "#29364a"
+    foreground = "#ffffff"
     timeout = 2
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    #background = "#5c7282"
-    background = "#676e78"
-    foreground = "#ffffff"
+    background = "#222222"
+    background = "#232E3E"
+    foreground = "#888888"
+    foreground = "#FFFFFF"
     timeout = 6
     # Icon for notifications with normal urgency, uncomment to enable
-    icon = ~/.local/share/icons/hicolor/32x32/apps/CustomIcons/notification.svg
+    icon = /home/$USER/.config/dunst/images/notification.svg
 
 [urgency_critical]
     appname = "discord"

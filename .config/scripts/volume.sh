@@ -18,8 +18,8 @@ if [ "$mute" == "yes" ]; then
     dunstify -u low -i ~/.local/share/icons/hicolor/32x32/apps/CustomIcons/volume_mute.svg -h string:x-dunst-stack-tag:volume "Muted" "${volume%?}%" 
 else
     if [ "${action}" == "up" ]; then
-        dunstify -u low -h string:category:volume -i ~/.local/share/icons/hicolor/32x32/apps/CustomIcons/volume_plus.svg -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%"
+        dunstify -u low -h string:category:volume -i ~/.config/dunst/images/shootmyself.png -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%" -h int:value:${volume}
     else
-        dunstify -u low -h string:category:volume -i ~/.local/share/icons/hicolor/32x32/apps/CustomIcons/volume_minus.svg -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%"
+        dunstify -u low -h string:category:volume -i ~/.config/dunst/images/shootmyself.png -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%" -h int:value:${volume}
     fi
 fi
