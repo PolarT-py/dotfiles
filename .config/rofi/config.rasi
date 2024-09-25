@@ -5,6 +5,7 @@ window {
 
 configuration {
     modi: "drun,run,window,ssh";
+    show-drun-label: "applications";
 }
 
 @import "~/.cache/wal/colors-rofi-dark"

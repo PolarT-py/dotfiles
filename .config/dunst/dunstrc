@@ -297,6 +297,7 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     #background = "#5c7282"
     #background = "#676e78"
+    #background = "#29364a99"
     background = "#29364a"
     foreground = "#ffffff"
     timeout = 2
@@ -308,18 +309,21 @@
     background = "#232E3E"
     foreground = "#888888"
     foreground = "#FFFFFF"
-    timeout = 6
+    timeout = 7
     # Icon for notifications with normal urgency, uncomment to enable
     icon = /home/$USER/.config/dunst/images/notification.svg
 
 [urgency_critical]
-    appname = "discord"
     background = "#900000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     icon = ~/.local/share/icons/hicolor/32x32/apps/CustomIcons/urgent.svg
+
+[play_sound]
+    summary = "*"
+    script = /home/$USER/.config/dunst/scripts/notification.sh
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
