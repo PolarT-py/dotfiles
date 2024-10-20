@@ -6,6 +6,46 @@ window {
 configuration {
     modi: "drun,run,window,ssh";
     show-drun-label: "applications";
+    show-icons: true;
+    timeout {
+    	delay: 15;
+    	action: "kb-cancel";
+    }
 }
 
 @import "~/.cache/wal/colors-rofi-dark"
+
+window {
+	border: 1px 1px 2px;
+	border-color: @normal-foreground;
+}
+
+inputbar {
+	border: 1px 1px 1px;
+	border-color: @normal-foreground;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 0px 0px 10px;
+}
+
+textbox {
+	border: 10px 10px 10px;
+	border-color: @normal-foreground;
+	border-radius: 5px;
+}
+
+#element {
+	border: 0px 5px 0px;
+	background-color: @urgent-foreground;
+	border-color: @urgent-background;
+	margin: 2px;
+	padding: 5px;
+	border-radius: 2px;
+	margin: 0px 0px 0px 10px;
+}
+
+#listview {
+	border: 1px 1px 2px;
+	border-color: @normal-foreground;
+	border-radius: 5px;
+}
