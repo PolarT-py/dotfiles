@@ -1,6 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
+	"position": "bottom",
     //"position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
@@ -9,23 +10,23 @@
     "margin-right": 5,
 	"margin-top": 0,
     // Choose the order of the modules
-    "modules-left": [
-        "tray",
-        "group/quickapps",
-        "hyprland/workspaces",
-        "group/sysinfo"
+    //"modules-left": [
+        //"tray",
+        //"group/quickapps",
+        //"hyprland/workspaces",
+        //"group/sysinfo"
         //"mpd",
-    ],
+    //],
     "modules-center": [
-        "hyprland/window"
-		//"wlr/taskbar"
+        //"hyprland/window"
+		"wlr/taskbar"
     ],
-    "modules-right": [
-        "pulseaudio",
-        "group/backlight_battery",
-        "clock",
-        "group/power_box"
-    ],
+    //"modules-right": [
+        //"pulseaudio",
+        //"group/backlight_battery",
+        //"clock",
+        //"group/power_box"
+    //],
     // Modules configuration
     "hyprland/workspaces": {
         "format": "{id}"
@@ -48,6 +49,7 @@
     	"icon_size": 20,
     	"buttons": ["minimize", "close", "activate"],
     	"format": "{icon} {title}",
+		"format": "{icon}",
     	"tooltip": true,
     	"on-click": "hyprctl dispatch focuswindow {pid}"
     },
