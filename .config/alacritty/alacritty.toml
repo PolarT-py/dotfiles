@@ -1,7 +1,6 @@
-#background_opacity = 0.8
-
 [font]
 size = 13.0
+normal = {family = "hack", style = "Regular"}
 
 [window]
 opacity = 0.8

@@ -6,7 +6,7 @@ action=$1
 volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -o '[0-9]*%' | head -n 1)
 echo "${volume%?}"
 
-if [ "$action" == "up" -a "${volume%?}" -le "95" ]; then
+if [ "$action" == "up" -a "${volume%?}" -le "150" ]; then
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 elif [ "$action" == "down" ]; then
     pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -19,11 +19,11 @@ volume=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -o '[0-9]*%' | head -n 1)
 mute=$(pactl get-sink-mute @DEFAULT_SINK@ | grep -o 'yes\|no')
 
 if [ "$mute" == "yes" ]; then
-    dunstify -u low -i ~/.config/dunst/images/shootmyself.png -h string:x-dunst-stack-tag:volume "Volume Muted" "${volume%?}%" -h int:value:${volume} 
+    dunstify -u low -i ~/.config/dunst/images/shootmyself.png_ -h string:x-dunst-stack-tag:volume "Volume Muted" "${volume%?}%" -h int:value:${volume} 
 else
     if [ "${action}" == "up" ]; then
-        dunstify -u low -h string:category:volume -i ~/.config/dunst/images/shootmyself.png -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%" -h int:value:${volume}
+        dunstify -u low -h string:category:volume -i ~/.config/dunst/images/shootmyself.png_ -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%" -h int:value:${volume}
     else
-        dunstify -u low -h string:category:volume -i ~/.config/dunst/images/shootmyself.png -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%" -h int:value:${volume}
+        dunstify -u low -h string:category:volume -i ~/.config/dunst/images/shootmyself.png_ -h string:x-dunst-stack-tag:volume "Volume" "${volume%?}%" -h int:value:${volume}
     fi
 fi
