@@ -72,9 +72,9 @@
     },
     "hyprland/window": {
 		// Formats: 
-        "format": "{class}",
+        "format": "{title}",
         "icons": true,
-        "format-alt": "{title}",
+        "format-alt": "{class}",
         "tooltip-format": "App title"
     },
     "mpd": {
