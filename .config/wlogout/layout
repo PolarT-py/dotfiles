@@ -6,6 +6,7 @@
 Lock",
     "keybind" : "l"
 }
+
 {
     "label" : "hibernate",
     "action" : "systemctl hibernate",
@@ -14,6 +15,7 @@ Lock",
 Hibernate",
     "keybind" : "h"
 }
+
 {
     "label" : "logout",
     "action" : "loginctl terminate-user $USER",
@@ -22,14 +24,7 @@ Hibernate",
 Logout",
     "keybind" : "e"
 }
-{
-    "label" : "shutdown",
-    "action" : "shutdown now",
-    "text" : "
 
-Shutdown",
-    "keybind" : "s"
-}
 {
     "label" : "suspend",
     "action" : "systemctl suspend",
@@ -38,6 +33,16 @@ Shutdown",
 Suspend",
     "keybind" : "u"
 }
+
+{
+    "label" : "shutdown",
+    "action" : "shutdown now",
+    "text" : "
+
+Shutdown",
+    "keybind" : "s"
+}
+
 {
     "label" : "reboot",
     "action" : "reboot -n",

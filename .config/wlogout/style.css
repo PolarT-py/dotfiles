@@ -13,7 +13,7 @@ window {
 }
 
 button {
-    border-radius: 10px;
+    border-radius: 1px;
     margin: 10px;
 	padding-top: 60px;
 	/*border-color: @outline1;*/
@@ -32,33 +32,60 @@ button:focused, button:active, button:hover {
 	background-color: @background2;
 	border-color: @outline2;
 	outline-style: none;
-	border-radius: 69px;
-	background-size: 30%;
+	border-radius: 16px;
+	background-size: 28%;
 }
 
-#lock {
-    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+#lock
+{
+	background-image: image(url("icons/lock.png"));
+}
+#lock:hover
+{
+	background-image: image(url("icons/lock-hover.png"));
 }
 
-#logout {
-    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-    margin: 30px;
+#logout
+{
+	background-image: image(url("icons/logout.png"));
+}
+#logout:hover
+{
+	background-image: image(url("icons/logout-hover.png"));
 }
 
-#suspend {
-    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+#shutdown
+{
+	background-image: image(url("icons/power.png"));
+}
+#shutdown:hover
+{
+	background-image: image(url("icons/power-hover.png"));
 }
 
-#hibernate {
-    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
-    margin: 30px;
+#reboot
+{
+	background-image: image(url("icons/restart.png"));
+}
+#reboot:hover
+{
+	background-image: image(url("icons/restart-hover.png"));
 }
 
-#shutdown {
-    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+#suspend
+{
+	background-image: image(url("icons/sleep.png"));
+}
+#suspend:hover
+{
+	background-image: image(url("icons/sleep-hover.png"));
 }
 
-#reboot {
-    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    margin: 30px;
+#hibernate
+{
+	background-image: image(url("icons/hibernate.png"));
+}
+#hibernate:hover
+{
+	background-image: image(url("icons/hibernate-hover.png"));
 }

@@ -222,12 +222,12 @@
         "format-source": "<span foreground='#5B736D'></span> {volume}%",
         "format-source-muted": "<span foreground='#414744'></span>  0%",
         "format-icons": {
-            "headphone": "c",
-            "hands-free": "c",
-            "headset": "c",
-            "phone": "c",
-            "portable": "c",
-            "car": "c",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": ["", "󰖀", " ", " "]
         },
         "on-click": "pavucontrol"

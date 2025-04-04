@@ -1,0 +1,2 @@
+Icons from NyanMaths
+https://github.com/NyanMaths/dotfiles/tree/master/.config/wlogout/icons
