@@ -3,7 +3,8 @@
 
 
 # Looks
-include current-theme.conf
+
+background #000000
 background_opacity 0.8
 dynamic_background_opacity yes
 term xterm-256color
@@ -36,8 +37,3 @@ remote_kitty if-needed
 allow_remote_control yes
 
 mouse_map ctrl+left click ungrabbed mouse_handle_click selection link prompt
-
-
-# BEGIN_KITTY_THEME
-# Afterglow
-# END_KITTY_THEME
