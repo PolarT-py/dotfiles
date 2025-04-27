@@ -11,6 +11,6 @@ fi
 echo "Wallpaper path: $WALLPAPER"
 
 # Pywal stuff
-wal -i "$WALLPAPER"
+wal -i $WALLPAPER
 
-killall waybar && waybar &
+killall waybar; waybar &
